@@ -4,7 +4,7 @@ pipeline {
     
     stage ('test') { // la phase build
         steps {
-        bat '.\gradlew test'
+        bat 'gradlew test'
                }
         }
   }
