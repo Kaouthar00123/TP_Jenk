@@ -18,7 +18,7 @@ pipeline {
              
       steps {                       
               withSonarQubeEnv('sonar') {
-                 bat 'gradlew sonarqube'
+                 bat 'gradle sonarqube'
               }
                              
       }
