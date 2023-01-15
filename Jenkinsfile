@@ -3,9 +3,12 @@ pipeline {
   stages {
     
     
-      stage ('test') { 
-
-                      }     
-      
-          }
+      stage ('test') 
+    { 
+          steps { 
+              bat 'gradle test'
+              bat 'gradle assemble'
+                 }
+      }  
+  }
 }
