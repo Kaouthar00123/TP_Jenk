@@ -18,7 +18,7 @@ pipeline {
              
       steps {                       
               withSonarQubeEnv('sonar') {
-                 bat 'sonar-scanner'
+                 bat 'gradlew sonarqube'
               }
                              
       }
@@ -51,9 +51,9 @@ steps {
           }           
             
             stage ('deploy') { 
-steps { 
-  bat 'gradlew publish'
-}
+                  steps { 
+                    bat 'gradlew publish'
+                  }
             }              
               
               stage ('notify') { 
