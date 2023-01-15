@@ -4,7 +4,7 @@ pipeline {
     
     stage ('test') { // la phase build
         steps {
-        bat 'gradlew test'
+        dir('sub-dir') {bat 'gradlew.bat clean test'}
                }
         }
   }
