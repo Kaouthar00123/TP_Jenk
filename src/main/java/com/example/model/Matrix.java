@@ -82,22 +82,17 @@ public class Matrix {
 		if(this == obj) {
 			return true;
 		}
-		return false;
-	}
-		
-	@Override
-  public int hashCode() {
-   
-	  return 1 ; 
-  }
 
 		if(obj == null || obj.getClass()!= this.getClass()) {
 			return false;
 		}
 		Matrix matrix = (Matrix) obj;
-		for (int i =0;i<matrix.nrows;i++) {
-			for (int j=0;j< matrix.ncols;j++) {
-				if(matrix.getValueAt(i,j)!= this.getValueAt(i,j)) {
+		for (int i =0;i<matrix.nrows;i++) 
+		{
+			for (int j=0;j< matrix.ncols;j++) 
+			{
+				if(matrix.getValueAt(i,j)!= this.getValueAt(i,j)) 
+				{
 					return false;
 				}
 			}
@@ -107,5 +102,12 @@ public class Matrix {
 	return  true;
 
 	}
+	
+		
+	@Override
+  public int hashCode() {
+   
+	  return 1 ; 
+  }
 
 }
