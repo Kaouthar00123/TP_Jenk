@@ -82,6 +82,12 @@ public class Matrix {
 		if(this == obj) {
 			return true;
 		}
+		
+	@Override
+  public int hashCode() {
+   
+	  return 1 ; 
+  }
 
 		if(obj == null || obj.getClass()!= this.getClass()) {
 			return false;
