@@ -76,9 +76,9 @@ pipeline {
         }
         failure {
           //slackSend( channel: "#Chanel2", token: "wMNmqJHk7RxqY92qkHn52aOJzaecMKqe", color: "good", message: "Test Email fail")
-             //mail to: "jk_essaheli@esi.dz",
-                      // subject: "Test Email fail",
-                      // body: "Test"
+             mail to: "jk_essaheli@esi.dz",
+                        subject: "Test Email fail",
+                        body: "Test"
             echo 'This will run only if failed'
         }
         unstable {
