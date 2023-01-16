@@ -69,13 +69,16 @@ pipeline {
        
         success {
           //slackSend( channel: "#Chanel2", token: "wMNmqJHk7RxqY92qkHn52aOJzaecMKqe", color: "good", message: "Test Email")
+          notifyEvents message: 'Success <b>Hello</b>', token: 'wMNmqJHk7RxqY92qkHn52aOJzaecMKqe'
              mail to: "jk_essaheli@esi.dz",
                        subject: "Test Email",
                        body: "Test"
             echo 'This will run only if successful'
+          
         }
         failure {
           //slackSend( channel: "#Chanel2", token: "wMNmqJHk7RxqY92qkHn52aOJzaecMKqe", color: "good", message: "Test Email fail")
+           notifyEvents message: 'Fail <b>Hello</b>', token: 'wMNmqJHk7RxqY92qkHn52aOJzaecMKqe'
              mail to: "jk_essaheli@esi.dz",
                         subject: "Test Email fail",
                         body: "Test"
