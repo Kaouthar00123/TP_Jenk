@@ -82,6 +82,8 @@ public class Matrix {
 		if(this == obj) {
 			return true;
 		}
+		return false;
+	}
 		
 	@Override
   public int hashCode() {
