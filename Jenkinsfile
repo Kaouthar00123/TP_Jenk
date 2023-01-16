@@ -6,7 +6,7 @@ pipeline {
       stage ('test') { 
           steps { 
               bat 'gradlew test'
-              archiveArtifacts 'build/reports/tests/test/*'
+              junit 'build/test-results/**/*.xml'
               cucumber reportTitle: 'My report', fileIncludePattern: 'target/report.json'
                  
           }
@@ -18,7 +18,7 @@ pipeline {
              
       steps {                       
               withSonarQubeEnv('sonar') {
-                 bat 'gradlew sonarqube'
+                 bat 'gradlew sonar'
               }
                              
       }
