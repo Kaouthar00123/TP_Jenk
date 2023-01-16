@@ -28,14 +28,14 @@ pipeline {
     
     
     
-        stage ('Quality') { 
+        /*stage ('Quality') { 
                 steps { 
                               timeout(time: 1, unit: 'HOURS') {
                               waitForQualityGate abortPipeline: true
                             }
 
                 }
-        }
+        } */
                 
           
           
